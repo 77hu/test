@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息详情</title>
+</head>
+<body>
+    <table border="1">
+    <thead>
+    <tr>
+        <td>id</td>
+        <td>姓名</td>
+        <td>号码</td>
+    </tr>
+    </thead>
+        <tbody>
+         {% for student in student_queryset %}
+        <tr>
+            <td>{{ student.id }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.phone }}</td>
+        </tr>
+        {% endfor %}
+     </tbody>
+    </table>
+</body>
+</html>
